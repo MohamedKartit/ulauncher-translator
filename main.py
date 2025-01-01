@@ -1,19 +1,16 @@
 from ulauncher.api.client.Extension import Extension
 from ulauncher.api.client.EventListener import EventListener
-from ulauncher.api.shared.event import KeywordQueryEvent, ItemEnterEvent
+from ulauncher.api.shared.event import KeywordQueryEvent
 from ulauncher.api.shared.item.ExtensionResultItem import ExtensionResultItem
 from ulauncher.api.shared.action.RenderResultListAction import RenderResultListAction
 from ulauncher.api.shared.action.HideWindowAction import HideWindowAction
 from ulauncher.api.shared.action.OpenUrlAction import OpenUrlAction
-
 from translate_shell_parser import TranslateShellParser
-
 
 class TranslateExtension(Extension):
     def __init__(self):
         super(TranslateExtension, self).__init__()
         self.subscribe(KeywordQueryEvent, KeywordQueryEventListener())
-
 
 class KeywordQueryEventListener(EventListener):
     def on_event(self, event, extension):
@@ -43,12 +40,10 @@ class KeywordQueryEventListener(EventListener):
                                 name=translation.translation,
                                 description=translation.part_of_speech + ', '.join(translation.synonyms),
                                 on_enter=HideWindowAction())
-
             for translation in translations
         ]
 
         return RenderResultListAction(items)
-
 
 if __name__ == '__main__':
     TranslateExtension().run()
