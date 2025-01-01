@@ -1,12 +1,15 @@
-# Disclaimer!
-Attention! This extension works only with ULauncher v4. 
-Someone needs to fork this repo, then upgrade the extension (to Python 3), so it will work with ULauncher v5. 
+# Translator Extension for Ulauncher (Ulauncher v5 Support)
 
-Corresponding issues are opened and could be found in the issues list. Unfortunately, due to my schedule, I am unable to do it by myself, so I would be glad to anyone, who would do it for ULauncher :)
+## Disclaimer
 
-# In two words
-Simple translator for https://ulauncher.io/ using translate-shell
+This extension was originally created for Ulauncher v4. However, this fork has been updated and upgraded to be compatible with Ulauncher v5 and Python 3.
 
-# Dependencies
+If you're using Ulauncher v5 or higher, this version of the extension should work perfectly. For users on Ulauncher v4, please refer to the original version of the extension.
 
-You have to install [translate-shell](https://github.com/soimort/translate-shell). Also it should be in your `$PATH` (Copy executeable to /bin/ for example)
+## In Two Words
+
+A simple translator extension for [Ulauncher](https://ulauncher.io/) that integrates with [translate-shell](https://github.com/soimort/translate-shell) to provide fast translations right from your desktop.
+
+## Dependencies
+
+You need to install [translate-shell](https://github.com/soimort/translate-shell). The executable must be in your system’s `$PATH` for the extension to work. For example, you can copy the executable to `/bin/` or any other directory that’s included in your `$PATH`.
